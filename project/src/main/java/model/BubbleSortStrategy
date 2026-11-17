@@ -1,0 +1,26 @@
+package model.implementations;
+
+import model.abstractions.SortStrategy;
+import shared.implementations.CustomUserCollection;
+import shared.abstractions.UserCollection;
+import shared.implementations.User;
+
+import java.util.Comparator;
+import java.util.List;
+
+public class BubbleSortStrategy implements SortStrategy {
+    public UserCollection sort(UserCollection collection, Comparator<User> comparator){
+        List<User> list = collection.getUsersList();
+        int n = list.size();
+        for (int i = 0; i < n-1; i++){
+            for (int j = 0; j < n-i-1; j++){
+                if (comparator.compare(list.get(j), list.get(j+1)) > 0){
+                    User tmp = list.get(j);
+                    list.set(j, list.get(j+1));
+                    list.set(j+1, tmp);
+                }
+            }
+        }
+        return new CustomUserCollection(list);
+    }
+}
