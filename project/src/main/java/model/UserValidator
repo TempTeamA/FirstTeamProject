@@ -1,0 +1,22 @@
+package model.implementations;
+
+
+import shared.implementations.User;
+
+public class UserValidator {
+    public static boolean isValid(User user){
+        if (user.getName() == null || user.getName().isEmpty()){
+            return false;
+        }
+        if (user.getPassword() == null || user.getPassword().length() <= 7){
+            return false;
+        }
+        if (user.getEmail() == null || !user.getEmail().contains("@")){
+            return false;
+        }
+        if (user.getAge() > 99 || user.getAge() < 13){
+            return false;
+        }
+        return true;
+    }
+}
