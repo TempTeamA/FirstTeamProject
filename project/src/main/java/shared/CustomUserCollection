@@ -1,0 +1,24 @@
+package shared.implementations;
+
+import shared.abstractions.UserCollection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomUserCollection implements UserCollection {
+    private final List<User> users;
+
+    public CustomUserCollection(List<User> users){
+        this.users = new ArrayList<>(users);
+    }
+
+    @Override
+    public Iterable<User> getUsers(){
+        return users;
+    }
+
+    @Override
+    public List<User> getUsersList(){
+        return users;
+    }
+}
