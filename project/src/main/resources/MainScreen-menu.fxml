@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenMenu">
+   <children>
+      <Label layoutX="147.0" layoutY="21.0" text="Выбор ввода" AnchorPane.leftAnchor="147.0" />
+      <Button layoutX="28.0" layoutY="189.0" mnemonicParsing="false" text="Загрузить файл" AnchorPane.leftAnchor="28.0" />
+      <Label layoutX="176.0" layoutY="193.0" text="Имя файла" AnchorPane.leftAnchor="176.0" />
+      <Button layoutX="27.0" layoutY="153.0" mnemonicParsing="false" text="Рандом" AnchorPane.leftAnchor="27.0" />
+      <Button layoutX="28.0" layoutY="118.0" mnemonicParsing="false" onAction="#onHandInputClick" text="Ручной ввод" AnchorPane.leftAnchor="28.0" />
+      <ChoiceBox fx:id="objectChoiceBox" layoutX="27.0" layoutY="69.0" prefWidth="150.0" AnchorPane.leftAnchor="27.0" />
+      <Label layoutX="419.0" layoutY="21.0" text="Выбор действия" AnchorPane.rightAnchor="91.39999999999998" />
+      <Button layoutX="418.0" layoutY="69.0" mnemonicParsing="false" text="Сортировка 1" AnchorPane.rightAnchor="90.0" />
+      <Button layoutX="418.0" layoutY="105.0" mnemonicParsing="false" text="Сортировка 2" AnchorPane.rightAnchor="90.0" />
+      <Button layoutX="464.0" layoutY="140.0" mnemonicParsing="false" text="Поиск" AnchorPane.rightAnchor="85.60000000000002" />
+      <Label layoutX="28.0" layoutY="51.0" text="Выбор вводимого объекта" AnchorPane.leftAnchor="28.0" />
+      <ListView layoutX="4.0" layoutY="239.0" prefHeight="186.0" prefWidth="593.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
